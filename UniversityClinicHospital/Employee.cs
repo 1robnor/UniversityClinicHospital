@@ -13,6 +13,9 @@ namespace UniversityClinicHospital
         public bool HasBeenPaid { get; set; }
         public int Salary { get; set; }
 
+        public List<Employee> EmployeeList = new List<Employee> { };
+
+
         //Constructors
         public Employee()
         {
@@ -33,5 +36,11 @@ namespace UniversityClinicHospital
             HasBeenPaid = true;
         }
 
+        public List<Employee> ReturnList()
+        {
+            return EmployeeList;
+        }
+        
+            
     }
 }

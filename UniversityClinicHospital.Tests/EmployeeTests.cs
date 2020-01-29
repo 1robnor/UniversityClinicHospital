@@ -103,5 +103,18 @@ namespace UniversityClinicHospital.Tests
             //Assert
             Assert.True(firstEmployee.HasBeenPaid);
         }
+
+        [Fact]
+        public void Do_We_Have_A_List()
+        {
+            //Arrange
+            Employee firstEmployee = new Employee();
+
+            //Act
+            var myList = firstEmployee.ReturnList();
+
+            //Assert
+            Assert.IsType<List<Employee>>(myList);
+        }
     }
 }
