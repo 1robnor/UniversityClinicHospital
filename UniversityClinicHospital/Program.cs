@@ -6,16 +6,8 @@ namespace UniversityClinicHospital
     {
         static void Main(string[] args)
         {
-
-            Employee firstEmployee = new Employee();
-            Console.WriteLine(firstEmployee.EmployeeName);
-
-            Employee secondEmployee = new Employee(1, "Rob");
-            Console.WriteLine($"{secondEmployee.EmployeeId} , {secondEmployee.EmployeeName}");
-
-            Console.WriteLine(secondEmployee.HasBeenPaid);
-            secondEmployee.PaySalary();
-            Console.WriteLine(secondEmployee.HasBeenPaid);
+            Employee firstEmployee = new Employee(1, "Rob");
+            Console.WriteLine($"{firstEmployee.EmployeeId} {firstEmployee.EmployeeName}");
 
             Console.ReadKey();
 
