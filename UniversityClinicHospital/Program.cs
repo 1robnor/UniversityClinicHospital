@@ -7,7 +7,13 @@ namespace UniversityClinicHospital
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello Rob!!");
+            Employee firstEmployee = new Employee();
+            Console.WriteLine(firstEmployee.EmployeeName);
+
+            Employee secondEmployee = new Employee(1, "Rob");
+            Console.WriteLine($"{secondEmployee.EmployeeId} , {secondEmployee.EmployeeName}");
+
+            Console.ReadKey();
 
         }
     }
