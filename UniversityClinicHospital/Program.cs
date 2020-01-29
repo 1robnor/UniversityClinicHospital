@@ -13,6 +13,10 @@ namespace UniversityClinicHospital
             Employee secondEmployee = new Employee(1, "Rob");
             Console.WriteLine($"{secondEmployee.EmployeeId} , {secondEmployee.EmployeeName}");
 
+            Console.WriteLine(secondEmployee.HasBeenPaid);
+            secondEmployee.PaySalary();
+            Console.WriteLine(secondEmployee.HasBeenPaid);
+
             Console.ReadKey();
 
         }
