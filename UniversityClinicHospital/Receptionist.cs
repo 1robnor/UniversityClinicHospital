@@ -10,7 +10,12 @@ namespace UniversityClinicHospital
         public bool IsOnThePhone { get; set; }
 
         //Constructors
-
+        public Receptionist()
+        {
+            IsOnThePhone = false;
+            HasBeenPaid = false;
+            Salary = 45000;
+        }
 
         //Methods
     }
