@@ -13,7 +13,8 @@ namespace UniversityClinicHospital
         //constructor
         public Nurse()
         {
-
+            HasBeenPaid = false;
+            Salary = 50000;
         }
 
         public Nurse(int employeeId, string employeeName, int numberOfPatients)
