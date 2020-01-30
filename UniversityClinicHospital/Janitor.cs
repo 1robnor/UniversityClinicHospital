@@ -26,7 +26,10 @@ namespace UniversityClinicHospital
             HasBeenPaid = false;
         }
         //methods
-
+        public override void PaySalary()
+        {
+            base.PaySalary();
+        }
 
     }
 }
