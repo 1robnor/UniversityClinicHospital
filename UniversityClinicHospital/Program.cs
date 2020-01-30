@@ -8,8 +8,9 @@ namespace UniversityClinicHospital
         {
 
             Doctor myDoctor = new Doctor(1, "Big Jon", "Lung Development");
-            Console.WriteLine($"{myDoctor.EmployeeId} {myDoctor.EmployeeName} {myDoctor.SpecialtyArea}");  
+            Console.WriteLine($"{myDoctor.EmployeeId} {myDoctor.EmployeeName} {myDoctor.SpecialtyArea}"); 
 
+            
             Console.ReadKey();
 
 
