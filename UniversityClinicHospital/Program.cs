@@ -19,6 +19,9 @@ namespace UniversityClinicHospital
             Janitor myJanitor = new Janitor(4, "Steve");
             Console.WriteLine($"{myJanitor.EmployeeId} {myJanitor.EmployeeName}");
 
+            Patient myPatient = new Patient(1, "Sam");
+            Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
+
             Console.ReadKey();
         }
 
