@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    public class Employee
+    abstract class Employee
     {
 
         //Properties
@@ -13,10 +13,10 @@ namespace UniversityClinicHospital
         public bool HasBeenPaid { get; set; }
         public int Salary { get; set; }
 
-        public List<Employee> EmployeeList = new List<Employee> { };
+  
 
 
-        //Constructors
+        /*Constructors
         public Employee()
         {
 
@@ -28,18 +28,15 @@ namespace UniversityClinicHospital
             EmployeeName = name;
             HasBeenPaid = false;
         }
+        */
 
 
         //Methods
-        public void PaySalary()
+        public virtual void PaySalary()
         {
             HasBeenPaid = true;
         }
 
-        public List<Employee> ReturnList()
-        {
-            return EmployeeList;
-        }
         
             
     }
