@@ -12,7 +12,8 @@ namespace UniversityClinicHospital
         //Constructor
         public Doctor()
         {
-
+            HasBeenPaid = false;
+            Salary = 90000;
         }
 
         public Doctor(int employeeId, string employeeName, string specialtyArea)
