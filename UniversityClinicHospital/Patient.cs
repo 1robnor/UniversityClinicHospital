@@ -15,6 +15,19 @@ namespace UniversityClinicHospital
 
         //Constructors
 
+        public Patient()
+        {
+            BloodLevel = 100;
+            HealthStatus = 100;
+        }
+
+        public Patient(int id, string name)
+        {
+            PatientId = id;
+            PatientName = name;
+            BloodLevel = 100;
+            HealthStatus = 100;
+        }
 
         //Methods
 
