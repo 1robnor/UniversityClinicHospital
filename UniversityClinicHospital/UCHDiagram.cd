@@ -10,8 +10,9 @@
   <Class Name="UniversityClinicHospital.Employee">
     <Position X="4.5" Y="0.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAIACAIAAAAAAAAAAAAAAAAAAAAAACAAAAAAECCAAA=</HashCode>
+      <HashCode>AAAIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECCAAA=</HashCode>
       <FileName>Employee.cs</FileName>
+      <NewMemberFileName>Doctor.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Consolas" Size="10" />

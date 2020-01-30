@@ -17,10 +17,10 @@ namespace UniversityClinicHospital
             Salary = 50000;
         }
 
-        public Nurse(int employeeId, string employeeName, int numberOfPatients)
+        public Nurse(int id, string name, int numberOfPatients)
         {
-            EmployeeId = employeeId;
-            EmployeeName = employeeName;
+            EmployeeId = id;
+            EmployeeName = name;
             NumberOfPatients = numberOfPatients;
             HasBeenPaid = false;
             Salary = 50000;

@@ -16,10 +16,19 @@ namespace UniversityClinicHospital
             Salary = 90000;
         }
 
-        public Doctor(int employeeId, string employeeName, string specialtyArea)
+        public Doctor(int id, string name)
         {
-            EmployeeId = employeeId;
-            EmployeeName = employeeName;
+            EmployeeId = id;
+            EmployeeName = name;
+            SpecialtyArea = "Assign Me a Specialty";
+            HasBeenPaid = false;
+            Salary = 90000;
+        }
+
+        public Doctor(int id, string name, string specialtyArea)
+        {
+            EmployeeId = id;
+            EmployeeName = name;
             SpecialtyArea = specialtyArea;
             HasBeenPaid = false;
             Salary = 90000;
