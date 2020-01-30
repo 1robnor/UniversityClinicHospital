@@ -10,10 +10,11 @@ namespace UniversityClinicHospital
             Doctor myDoctor = new Doctor(1, "Big Jon", "Lung Development");
             Console.WriteLine($"{myDoctor.EmployeeId} {myDoctor.EmployeeName} {myDoctor.SpecialtyArea}");
 
-            Nurse myNurse = new Nurse(1, "Carol", 1);
+            Nurse myNurse = new Nurse(2, "Carol", 1);
             Console.WriteLine($"{myNurse.EmployeeId} {myNurse.EmployeeName} {myNurse.NumberOfPatients}");
 
-
+            Receptionist myReceptionist = new Receptionist(3, "Rachael");
+            Console.WriteLine($"{myReceptionist.EmployeeId} {myReceptionist.EmployeeName} ");
             Console.ReadKey();
         }
 
