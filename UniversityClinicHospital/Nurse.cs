@@ -21,7 +21,7 @@ namespace UniversityClinicHospital
         {
             EmployeeId = employeeId;
             EmployeeName = employeeName;
-            NumberOfPatients = NumberOfPatients;
+            NumberOfPatients = numberOfPatients;
             HasBeenPaid = false;
             Salary = 50000;
         }
@@ -29,7 +29,7 @@ namespace UniversityClinicHospital
         //methods
         public override void PaySalary()
         {
-            base.PaySalary();git
+            base.PaySalary();
         }
 
     }
