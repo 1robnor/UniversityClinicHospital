@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UniversityClinicHospital.Tests
+namespace UniversityClinicHospital
 {
-    class Doctortest
+    class Nurse
     {
     }
 }
