@@ -17,6 +17,14 @@ namespace UniversityClinicHospital
             HasBeenPaid = false; 
         }
 
+        public Janitor(int id, string name)
+        {
+            EmployeeId = id;
+            EmployeeName = name;
+            IsSweeping = false;
+            Salary = 40000;
+            HasBeenPaid = false;
+        }
         //methods
 
 
