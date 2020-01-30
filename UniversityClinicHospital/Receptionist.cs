@@ -17,6 +17,15 @@ namespace UniversityClinicHospital
             Salary = 45000;
         }
 
+        public Receptionist(int id, string name)
+        {
+            EmployeeId = id;
+            EmployeeName = name;
+            IsOnThePhone = false;
+            HasBeenPaid = false;
+            Salary = 45000;
+        }
+
         //Methods
     }
 }
