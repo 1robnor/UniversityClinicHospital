@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    public class Doctor:Employee
+    public class Doctor : Employee
     {
         //Properties
         public string SpecialtyArea { get; set; }
@@ -15,7 +15,7 @@ namespace UniversityClinicHospital
 
         }
 
-        public class Doctor(int employeeId, string employeeName, string specialtyArea)
+        public Doctor(int employeeId, string employeeName, string specialtyArea)
         {
             EmployeeId = employeeId;
             EmployeeName = employeeName;
@@ -26,6 +26,12 @@ namespace UniversityClinicHospital
 
 
         //Methods
+
+        public override void PaySalary()
+        {
+            HasBeenPaid = true;
+        }
+
 
     }
 }
