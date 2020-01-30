@@ -6,6 +6,12 @@ namespace UniversityClinicHospital
 {
     public class Receptionist : Employee
     {
+        //Properties
+        public bool IsOnThePhone { get; set; }
 
+        //Constructors
+
+
+        //Methods
     }
 }
