@@ -27,5 +27,9 @@ namespace UniversityClinicHospital
         }
 
         //Methods
+        public override void PaySalary()
+        {
+            base.PaySalary();
+        }
     }
 }

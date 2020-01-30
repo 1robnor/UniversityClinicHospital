@@ -30,7 +30,7 @@ namespace UniversityClinicHospital
 
         public override void PaySalary()
         {
-            HasBeenPaid = true;
+            base.PaySalary();
         }
 
 
