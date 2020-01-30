@@ -14,8 +14,6 @@ namespace UniversityClinicHospital
         public int Salary { get; set; }
 
   
-
-
         /*Constructors
         public Employee()
         {
