@@ -37,6 +37,10 @@ namespace UniversityClinicHospital
             Console.Write($" On the Phone: {IsOnThePhone}");
 
         }
-
+        public override void CareForPatient(Patient myPatient)
+        {
+            //effect 
+            Console.Write($"Sorry you cannot care for a patient, stay in your lane. \n");
+        }
     }
 }

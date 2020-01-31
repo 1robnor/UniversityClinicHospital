@@ -37,7 +37,12 @@ namespace UniversityClinicHospital
             Console.Write($" Number of Patients: {NumberOfPatients}");
 
         }
-
-
+        public override void CareForPatient(Patient myPatient)
+        {
+            //effect patient health status
+            Console.Write($"Current health is : {myPatient.HealthStatus}");
+            myPatient.HealthStatus += 5;
+            Console.Write($" After Nurse visit : {myPatient.HealthStatus} \n");
+        }
     }
 }

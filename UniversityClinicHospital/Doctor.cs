@@ -54,7 +54,7 @@ namespace UniversityClinicHospital
             //effect patient health status
             Console.Write($"Current health is : {myPatient.HealthStatus}");
             myPatient.HealthStatus += 10;
-            Console.Write($"After Doctor visit : {myPatient.HealthStatus}");
+            Console.Write($" After Doctor visit : {myPatient.HealthStatus} \n"); 
         }
 
     }

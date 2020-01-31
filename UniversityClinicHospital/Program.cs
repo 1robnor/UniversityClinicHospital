@@ -53,7 +53,18 @@ namespace UniversityClinicHospital
                         }
                         break;
                     case "3":
-                        Console.Clear();              
+                        Console.Clear();
+                        foreach (Employee employee in employeeList)
+                        {
+                            employee.ShowEmployeeList();
+                            Console.WriteLine();
+                        }
+
+                        Console.WriteLine("Select a medical professional to care for patient by ID.");
+                        int userSelection = Convert.ToInt32(Console.ReadLine());
+                        Employee selectedEmployee = employeeList[userSelection - 1];
+                        selectedEmployee.CareForPatient(myPatient);
+
                         break;
                     case "4":
                         hospitalIsRunning = false;
