@@ -8,7 +8,7 @@ namespace UniversityClinicHospital
     {
         //properties
         public bool IsSweeping { get; set; }
-
+        
         //Constructors
         public Janitor()
         {
