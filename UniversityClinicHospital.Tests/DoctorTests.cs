@@ -143,7 +143,7 @@ namespace UniversityClinicHospital.Tests
             firstDoctor.DrawBlood(myPatient);
 
             //Assert
-            Assert.Equal(currentBloodLevel, myPatient.BloodLevel);
+            Assert.Equal(currentBloodLevel -10, myPatient.BloodLevel);
 
         }
 
