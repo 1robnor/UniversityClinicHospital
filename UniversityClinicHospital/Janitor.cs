@@ -31,5 +31,12 @@ namespace UniversityClinicHospital
             base.PaySalary();
         }
 
+        public override void ShowEmployeeList()
+        {
+            base.ShowEmployeeList();
+            Console.Write($"{IsSweeping}");
+
+        }
+
     }
 }
