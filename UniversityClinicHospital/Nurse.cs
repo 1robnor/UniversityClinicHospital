@@ -50,7 +50,7 @@ namespace UniversityClinicHospital
             //effect patient Blood Level
             Console.Write($"Current Blood Level is : {myPatient.BloodLevel}");
             myPatient.BloodLevel -= 5;
-            Console.Write($" After Doctor visit : {myPatient.BloodLevel} \n");
+            Console.Write($" After Nurse visit : {myPatient.BloodLevel} \n");
         }
     }
 }

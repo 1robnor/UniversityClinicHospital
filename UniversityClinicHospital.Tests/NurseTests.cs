@@ -11,6 +11,7 @@ namespace UniversityClinicHospital.Tests
         public void Nurse_Can_I_Create_A_New_Class()
         {
             Nurse firstNurse = new Nurse();
+
         }
 
         [Fact]
@@ -130,6 +131,21 @@ namespace UniversityClinicHospital.Tests
             Assert.Equal(currentHealth +5, myPatient.HealthStatus);
         }
 
+        [Fact]
+        public void Draw_Blood_Does_Blood_Level_Reduce_by_5()
+        {
+            //Arrange
+            Nurse firstNurse = new Nurse();
+            Patient myPatient = new Patient(1, "Sam");
+
+            //Act
+            var currentBloodLevel = myPatient.BloodLevel;
+            firstNurse.DrawBlood(myPatient);
+
+            //Assert
+            Assert.Equal(currentBloodLevel - 5, myPatient.BloodLevel);
+
+        }
 
     }
 }
