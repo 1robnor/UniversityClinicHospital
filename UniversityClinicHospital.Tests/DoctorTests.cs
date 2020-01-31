@@ -115,5 +115,6 @@ namespace UniversityClinicHospital.Tests
             Assert.True(firstDoctor.HasBeenPaid);
         }
 
+
     }
 }

@@ -39,7 +39,8 @@ namespace UniversityClinicHospital
                     case "1":
                         foreach (Employee employee in employeeList)
                         {
-                            Console.WriteLine($"{employee.EmployeeId} {employee.EmployeeName}");
+                            employee.ShowEmployeeList();
+                            Console.WriteLine();
                         }
                         break;
                     case "2":

@@ -24,6 +24,11 @@ namespace UniversityClinicHospital
 
             HasBeenPaid = true;
         }
+
+        public virtual void ShowEmployeeList()
+        {
+            Console.Write($"{EmployeeId} {EmployeeName} {Salary} {HasBeenPaid}");
+        }
     
     }
 }
