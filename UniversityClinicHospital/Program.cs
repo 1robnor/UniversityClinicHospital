@@ -31,7 +31,8 @@ namespace UniversityClinicHospital
                 Console.WriteLine("1. List all Employees");
                 Console.WriteLine("2. Pay All Employees");
                 Console.WriteLine("3. Care For Patient");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("4. Draw Patient Blood");
+                Console.WriteLine("5. Exit");
                 string userInput = Console.ReadLine();
 
 
@@ -67,6 +68,19 @@ namespace UniversityClinicHospital
 
                         break;
                     case "4":
+                        Console.Clear();
+                        foreach (Employee employee in employeeList)
+                        {
+                            employee.ShowEmployeeList();
+                            Console.WriteLine();
+                        }
+
+                        Console.WriteLine("Select a medical professional to care for patient by ID.");
+                        int userChoice = Convert.ToInt32(Console.ReadLine());
+                        Employee chosenEmployee = employeeList[userChoice - 1];
+                        chosenEmployee.DrawBlood(myPatient);
+                        break;
+                    case "5":
                         hospitalIsRunning = false;
 
                         break;

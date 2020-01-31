@@ -40,7 +40,12 @@ namespace UniversityClinicHospital
         public override void CareForPatient(Patient myPatient)
         {
             //effect 
-            Console.Write($"Sorry you cannot care for a patient, stay in your lane. \n");
+            Console.Write("Sorry you cannot care for a patient, stay in your lane. \n");
+        }
+
+        public override void DrawBlood(Patient myPatient)
+        {
+            Console.Write("Sorry you cannot draw blood for a patient, stay in your lane. \n");
         }
     }
 }
