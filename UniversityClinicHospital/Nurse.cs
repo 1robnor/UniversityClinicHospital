@@ -34,7 +34,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($"{NumberOfPatients}");
+            Console.Write($" Number of Patients: {NumberOfPatients}");
 
         }
 

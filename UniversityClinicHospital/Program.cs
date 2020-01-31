@@ -20,14 +20,14 @@ namespace UniversityClinicHospital
             
             //Create Patient
             Patient myPatient = new Patient(1, "Sam");
-            Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
+            //Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
 
 
             bool hospitalIsRunning = true;
 
             while(hospitalIsRunning)
             {
-
+                Console.WriteLine("Welcome To University Clinic Hospital!");
                 Console.WriteLine("1. List all Employees");
                 Console.WriteLine("2. Pay All Employees");
                 Console.WriteLine("3. Exit");
@@ -37,6 +37,7 @@ namespace UniversityClinicHospital
                 switch (userInput)
                 {
                     case "1":
+                        Console.Clear();
                         foreach (Employee employee in employeeList)
                         {
                             employee.ShowEmployeeList();
@@ -44,6 +45,7 @@ namespace UniversityClinicHospital
                         }
                         break;
                     case "2":
+                        Console.Clear();
                         foreach (Employee employee in employeeList)
                         {
                             employee.PaySalary();

@@ -34,7 +34,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($"{IsOnThePhone}");
+            Console.Write($" On the Phone: {IsOnThePhone}");
 
         }
 

@@ -34,7 +34,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($"{IsSweeping}");
+            Console.Write($" Is Sweeping: {IsSweeping}");
 
         }
 

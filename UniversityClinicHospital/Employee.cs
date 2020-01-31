@@ -17,7 +17,7 @@ namespace UniversityClinicHospital
         public virtual void PaySalary()
         {
 
-            if(HasBeenPaid)
+            if(!HasBeenPaid)
                 Console.WriteLine("All Employees have been paid!");
             else
                 Console.WriteLine("You have already paid employees, but I am sure they would like 2 paychecks, Sorry!");
@@ -27,7 +27,7 @@ namespace UniversityClinicHospital
 
         public virtual void ShowEmployeeList()
         {
-            Console.Write($"{EmployeeId} {EmployeeName} {Salary} {HasBeenPaid}");
+            Console.Write($"ID: {EmployeeId} Name: {EmployeeName} Salary: {Salary} Has Been Paid: {HasBeenPaid}");
         }
     
     }

@@ -45,7 +45,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($"{SpecialtyArea}");
+            Console.Write($" Specialty Area: {SpecialtyArea}");
 
         }
     }
