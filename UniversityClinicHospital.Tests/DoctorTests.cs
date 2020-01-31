@@ -131,6 +131,22 @@ namespace UniversityClinicHospital.Tests
 
         }
 
+        [Fact]
+        public void DrawBlood_Does_Blood_Level_Reduce_by_10()
+        {
+            //Arrange
+            Doctor firstDoctor = new Doctor(1, "Rob");
+            Patient myPatient = new Patient(1, "Sam");
+
+            //Act
+            var currentBloodLevel = myPatient.BloodLevel;
+            firstDoctor.DrawBlood(myPatient);
+
+            //Assert
+            Assert.Equal(currentBloodLevel, myPatient.BloodLevel);
+
+        }
+
 
     }
 }

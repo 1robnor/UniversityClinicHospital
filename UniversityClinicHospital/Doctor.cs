@@ -57,5 +57,13 @@ namespace UniversityClinicHospital
             Console.Write($" After Doctor visit : {myPatient.HealthStatus} \n"); 
         }
 
+        public override void DrawBlood(Patient myPatient)
+        {
+            //effect patient Blood Level
+            Console.Write($"Current Blood Level is : {myPatient.BloodLevel}");
+            myPatient.BloodLevel -= 10;
+            Console.Write($" After Doctor visit : {myPatient.BloodLevel} \n");
+        }
+
     }
 }
