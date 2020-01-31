@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UniversityClinicHospital
 {
@@ -7,18 +8,21 @@ namespace UniversityClinicHospital
         static void Main(string[] args)
         {
 
-            Doctor myDoctor = new Doctor(1, "Big Jon", "Lung Development");
-            Console.WriteLine($"{myDoctor.EmployeeId} {myDoctor.EmployeeName} {myDoctor.SpecialtyArea}");
+            //Create List
+            List<Employee> employeeList = new List<Employee>();
 
-            Nurse myNurse = new Nurse(2, "Carol", 1);
-            Console.WriteLine($"{myNurse.EmployeeId} {myNurse.EmployeeName} {myNurse.NumberOfPatients}");
+            // Add parts to the list.
+            employeeList.Add(new Doctor {EmployeeId = 1, EmployeeName = "Dr. Feel Good", SpecialtyArea = "Heart Surgeon" });
+            employeeList.Add(new Nurse { EmployeeId = 2, EmployeeName = "Nurse FeelGood", NumberOfPatients = 1 });
+            employeeList.Add(new Receptionist { EmployeeId = 3, EmployeeName = "Rachael"});
+            employeeList.Add(new Janitor { EmployeeId = 4, EmployeeName = "Steve"});
 
-            Receptionist myReceptionist = new Receptionist(3, "Rachael");
-            Console.WriteLine($"{myReceptionist.EmployeeId} {myReceptionist.EmployeeName} ");
+            foreach (Employee employee in employeeList)
+            {
+                Console.WriteLine($"{employee.EmployeeId} {employee.EmployeeName}");
+            }
 
-            Janitor myJanitor = new Janitor(4, "Steve");
-            Console.WriteLine($"{myJanitor.EmployeeId} {myJanitor.EmployeeName}");
-
+            //Create Patient
             Patient myPatient = new Patient(1, "Sam");
             Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
 
