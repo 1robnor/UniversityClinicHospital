@@ -115,6 +115,22 @@ namespace UniversityClinicHospital.Tests
             Assert.True(firstDoctor.HasBeenPaid);
         }
 
+        [Fact]
+        public void CareForPatient_Does_Health_Level_Increase_by_10()
+        {
+            //Arrange
+            Doctor firstDoctor = new Doctor(1, "Rob");
+            Patient myPatient = new Patient(1, "Sam");
+
+            //Act
+            var currentHealth = myPatient.HealthStatus;
+            firstDoctor.CareForPatient(myPatient);
+
+            //Assert
+            Assert.Equal(currentHealth +10, myPatient.HealthStatus);
+
+        }
+
 
     }
 }
