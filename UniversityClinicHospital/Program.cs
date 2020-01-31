@@ -30,7 +30,8 @@ namespace UniversityClinicHospital
                 Console.WriteLine("Welcome To University Clinic Hospital!");
                 Console.WriteLine("1. List all Employees");
                 Console.WriteLine("2. Pay All Employees");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Care For Patient");
+                Console.WriteLine("4. Exit");
                 string userInput = Console.ReadLine();
 
 
@@ -52,7 +53,11 @@ namespace UniversityClinicHospital
                         }
                         break;
                     case "3":
+                        Console.Clear();              
+                        break;
+                    case "4":
                         hospitalIsRunning = false;
+
                         break;
                     default:
                         break;

@@ -29,6 +29,7 @@ namespace UniversityClinicHospital
         {
             Console.Write($"ID: {EmployeeId} Name: {EmployeeName} Salary: {Salary} Has Been Paid: {HasBeenPaid}");
         }
-    
+
+        public abstract void CareForPatient(Patient myPatient);
     }
 }

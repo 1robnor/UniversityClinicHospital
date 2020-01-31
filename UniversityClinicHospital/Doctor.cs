@@ -48,5 +48,14 @@ namespace UniversityClinicHospital
             Console.Write($" Specialty Area: {SpecialtyArea}");
 
         }
+
+        public override void CareForPatient(Patient myPatient)
+        {
+            //effect patient health status
+            Console.Write($"Current health is : {myPatient.HealthStatus}");
+            myPatient.HealthStatus += 10;
+            Console.Write($"After Doctor visit : {myPatient.HealthStatus}");
+        }
+
     }
 }
