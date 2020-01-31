@@ -16,6 +16,12 @@ namespace UniversityClinicHospital
         //Methods
         public virtual void PaySalary()
         {
+
+            if(HasBeenPaid)
+                Console.WriteLine("All Employees have been paid!");
+            else
+                Console.WriteLine("You have already paid employees, but I am sure they would like 2 paychecks, Sorry!");
+
             HasBeenPaid = true;
         }
     
