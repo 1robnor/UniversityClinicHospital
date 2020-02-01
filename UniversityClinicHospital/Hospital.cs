@@ -54,6 +54,23 @@ namespace UniversityClinicHospital
 
         }
 
+        public void HealthStatusForPatient(Patient myPatient)
+        {
+            Console.WriteLine("Select a medical professional to care for patient by ID.");
+            int userSelection = Convert.ToInt32(Console.ReadLine());
+            Employee selectedEmployee = employeeList[userSelection - 1];
+            selectedEmployee.CareForPatient(myPatient);
+        }
+
+        public void DrawBloodFromPatient(Patient myPatient)
+        {
+
+            Console.WriteLine("Select a medical professional to care for patient by ID.");
+            int userChoice = Convert.ToInt32(Console.ReadLine());
+            Employee chosenEmployee = employeeList[userChoice - 1];
+            chosenEmployee.DrawBlood(myPatient);
+        }
+        
 
     }
 }

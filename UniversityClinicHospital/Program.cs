@@ -39,41 +39,22 @@ namespace UniversityClinicHospital
                         Console.Clear();
                         myHospital.PayAllEmployees();
                         break;
-
                     case "3":
                         Console.Clear();
                         myPatient.ViewPatientInfo();
                         break;
                     case "4":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.ShowEmployeeList();
-                            Console.WriteLine();
-                        }
-
-                        Console.WriteLine("Select a medical professional to care for patient by ID.");
-                        int userSelection = Convert.ToInt32(Console.ReadLine());
-                        Employee selectedEmployee = employeeList[userSelection - 1];
-                        selectedEmployee.CareForPatient(myPatient);
-
+                        myHospital.ShowEmployeeList();
+                        myHospital.HealthStatusForPatient(myPatient);
                         break;
                     case "5":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.ShowEmployeeList();
-                            Console.WriteLine();
-                        }
-
-                        Console.WriteLine("Select a medical professional to care for patient by ID.");
-                        int userChoice = Convert.ToInt32(Console.ReadLine());
-                        Employee chosenEmployee = employeeList[userChoice - 1];
-                        chosenEmployee.DrawBlood(myPatient);
+                        myHospital.ShowEmployeeList();
+                        myHospital.DrawBloodFromPatient(myPatient);
                         break;
                     case "6":
                         hospitalIsRunning = false;
-
                         break;
                     default:
                         break;
