@@ -1,18 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="UniversityClinicHospital.Program">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityClinicHospital.Employee">
-    <Position X="4.5" Y="0.5" Width="3" />
+    <Position X="4.25" Y="2" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECCAAA=</HashCode>
+      <HashCode>IABIACAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAECCAAA=</HashCode>
       <FileName>Employee.cs</FileName>
       <NewMemberFileName>Doctor.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityClinicHospital.Patient">
+    <Position X="1.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACAQAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityClinicHospital.Doctor">
+    <Position X="1.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IABAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityClinicHospital.Nurse">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAEA=</HashCode>
+      <FileName>Nurse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityClinicHospital.Receptionist">
+    <Position X="6" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Receptionist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityClinicHospital.Janitor">
+    <Position X="8.25" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IABEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Janitor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Consolas" Size="10" />

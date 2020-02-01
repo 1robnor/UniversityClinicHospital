@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    public class Receptionist : Doctor
+    public class Receptionist : Employee
     {
         //Properties
         public bool IsOnThePhone { get; set; }
