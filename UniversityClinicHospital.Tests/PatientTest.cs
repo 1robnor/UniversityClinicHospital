@@ -110,6 +110,20 @@ namespace UniversityClinicHospital.Tests
 
         }
 
+        [Fact]
+        public void ViewPatientInfo_Displays_A_HealthStatus()
+        {
+
+            //Arrange
+            Patient firstPatient = new Patient(1, "Disco");
+
+            //Act
+            firstPatient.ViewPatientInfo();
+
+            //Assert
+            Assert.Equal(100, firstPatient.HealthStatus);
+
+        }
 
     }
 }

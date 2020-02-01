@@ -33,7 +33,7 @@ namespace UniversityClinicHospital
 
         public void ViewPatientInfo()
         {
-            Console.WriteLine($"Patient Id:{PatientId} Name:{PatientName} BloodLevel {BloodLevel}");
+            Console.WriteLine($"Patient Id:{PatientId} Name:{PatientName} BloodLevel: {BloodLevel} HealthStatus: {HealthStatus}");
         }
 
     }
