@@ -23,28 +23,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityClinicHospital.Doctor">
-    <Position X="1.5" Y="5.5" Width="2.5" />
+    <Position X="0.75" Y="5.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>IABAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Doctor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityClinicHospital.Nurse">
-    <Position X="4.25" Y="5.5" Width="1.5" />
+    <Position X="3.75" Y="5.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>IABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAEA=</HashCode>
       <FileName>Nurse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityClinicHospital.Receptionist">
-    <Position X="6" Y="5.5" Width="1.75" />
+    <Position X="6.25" Y="5.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>IABAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Receptionist.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityClinicHospital.Janitor">
-    <Position X="8.25" Y="5.5" Width="2.75" />
+    <Position X="9.25" Y="5.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>IABEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Janitor.cs</FileName>
