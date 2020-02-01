@@ -37,12 +37,10 @@ namespace UniversityClinicHospital
 
         public void ShowEmployeeList()
         {
-            Console.WriteLine("Hello World");
             foreach (Employee listofEmployees in employeeList)
-            {
-                //Console.Write($"ID: {employee.EmployeeId} Name: {employee.EmployeeName} Salary: {employee.Salary} Has Been Paid: {employee.HasBeenPaid}");
-                 listofEmployees.ShowEmployeeList();
-                //Console.WriteLine();
+            {         
+                listofEmployees.ShowEmployeeList();
+                Console.WriteLine();
             }
         }
 
