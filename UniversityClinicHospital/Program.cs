@@ -7,17 +7,9 @@ namespace UniversityClinicHospital
     {
         static void Main(string[] args)
         {
+            //Create a New Hospital
+            Hospital myHospital = new Hospital(1, "UHC");
 
-            //Create List
-            List<Employee> employeeList = new List<Employee>();
-
-            // Add parts to the list.
-            employeeList.Add(new Doctor {EmployeeId = 1, EmployeeName = "Dr. Feel Good", SpecialtyArea = "Heart Surgeon" });
-            employeeList.Add(new Nurse { EmployeeId = 2, EmployeeName = "Nurse FeelGood", NumberOfPatients = 1 });
-            employeeList.Add(new Receptionist { EmployeeId = 3, EmployeeName = "Rachael"});
-            employeeList.Add(new Janitor { EmployeeId = 4, EmployeeName = "Steve"});
-
-            
             //Create Patient
             Patient myPatient = new Patient(1, "Sam");
             //Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
@@ -41,18 +33,11 @@ namespace UniversityClinicHospital
                 {
                     case "1":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.ShowEmployeeList();
-                            Console.WriteLine();
-                        }
+                        myHospital.ShowEmployeeList();
                         break;
                     case "2":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.PaySalary();
-                        }
+                        myHospital.PayAllEmployees();
                         break;
 
                     case "3":
