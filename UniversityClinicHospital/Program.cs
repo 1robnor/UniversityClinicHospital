@@ -30,9 +30,10 @@ namespace UniversityClinicHospital
                 Console.WriteLine("Welcome To University Clinic Hospital!");
                 Console.WriteLine("1. List all Employees");
                 Console.WriteLine("2. Pay All Employees");
-                Console.WriteLine("3. Care For Patient");
-                Console.WriteLine("4. Draw Patient Blood");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("3. View Patient Information");
+                Console.WriteLine("4. Care For Patient");
+                Console.WriteLine("5. Draw Patient Blood");
+                Console.WriteLine("6. Exit");
                 string userInput = Console.ReadLine();
 
 
@@ -53,7 +54,12 @@ namespace UniversityClinicHospital
                             employee.PaySalary();
                         }
                         break;
+
                     case "3":
+                        Console.Clear();
+                        myPatient.ViewPatientInfo();
+                        break;
+                    case "4":
                         Console.Clear();
                         foreach (Employee employee in employeeList)
                         {
@@ -67,7 +73,7 @@ namespace UniversityClinicHospital
                         selectedEmployee.CareForPatient(myPatient);
 
                         break;
-                    case "4":
+                    case "5":
                         Console.Clear();
                         foreach (Employee employee in employeeList)
                         {
@@ -80,7 +86,7 @@ namespace UniversityClinicHospital
                         Employee chosenEmployee = employeeList[userChoice - 1];
                         chosenEmployee.DrawBlood(myPatient);
                         break;
-                    case "5":
+                    case "6":
                         hospitalIsRunning = false;
 
                         break;
