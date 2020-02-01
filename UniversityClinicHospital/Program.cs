@@ -32,24 +32,23 @@ namespace UniversityClinicHospital
                 switch (userInput)
                 {
                     case "1":
-                        Console.Clear();
                         myHospital.ShowEmployeeList();
                         break;
                     case "2":
-                        Console.Clear();
+                   
                         myHospital.PayAllEmployees();
                         break;
                     case "3":
-                        Console.Clear();
+                    
                         myPatient.ViewPatientInfo();
                         break;
                     case "4":
-                        Console.Clear();
+                      
                         myHospital.ShowEmployeeList();
                         myHospital.HealthStatusForPatient(myPatient);
                         break;
                     case "5":
-                        Console.Clear();
+                      
                         myHospital.ShowEmployeeList();
                         myHospital.DrawBloodFromPatient(myPatient);
                         break;
