@@ -4,7 +4,25 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    class Hospital
+    public class Hospital
     {
+        //Properties
+        public int HospitalId { get; set; }
+        public String HosptialName { get; set; }
+
+        //Constructors
+        public Hospital()
+        {
+
+        }
+
+        public Hospital(int id, string name)
+        {
+            HospitalId = id;
+            HosptialName = name;
+        }
+
+        //Methods
+
     }
 }
