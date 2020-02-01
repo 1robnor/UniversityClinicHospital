@@ -31,5 +31,10 @@ namespace UniversityClinicHospital
 
         //Methods
 
+        public void ViewPatientInfo()
+        {
+            Console.WriteLine($"Patient Id:{PatientId} Name:{PatientName} BloodLevel {BloodLevel}");
+        }
+
     }
 }
