@@ -15,7 +15,10 @@ namespace UniversityClinicHospital
 
             //Create Patient
             Patient myPatient = new Patient(1, "Sam");
-     
+
+            //Create counter for tick method
+            int counter = 0;
+
             bool hospitalIsRunning = true;
 
             while(hospitalIsRunning)
@@ -29,29 +32,41 @@ namespace UniversityClinicHospital
                 Console.WriteLine("6. Exit");
                 string userInput = Console.ReadLine();
 
+                //Invoke Tick Method Stretch Task
+                if(counter %5 == 0)
+                {
+                    //Do some tasks in here
+                    Console.WriteLine("Hello World From Tick Method!"); 
+                }
+
                 switch (userInput)
                 {
                     case "1":
                         Console.Clear();
                         myHospital.ShowEmployeeList();
+                        counter++;
                         break;
                     case "2":
                         Console.Clear();
                         myHospital.PayAllEmployees();
+                        counter++;
                         break;
                     case "3":
                         Console.Clear();
                         myPatient.ViewPatientInfo();
+                        counter++;
                         break;
                     case "4":
                         Console.Clear();
                         myHospital.ShowEmployeeList();
                         myHospital.HealthStatusForPatient(myPatient);
+                        counter++;
                         break;
                     case "5":
                         Console.Clear();
                         myHospital.ShowEmployeeList();
                         myHospital.DrawBloodFromPatient(myPatient);
+                        counter++;
                         break;
                     case "6":
                         hospitalIsRunning = false;
