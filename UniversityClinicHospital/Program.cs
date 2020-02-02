@@ -17,7 +17,7 @@ namespace UniversityClinicHospital
             Patient myPatient = new Patient(1, "Sam");
 
             //Create counter for tick method
-            int counter = 0;
+            int counter = 1;
 
             bool hospitalIsRunning = true;
 
@@ -31,13 +31,6 @@ namespace UniversityClinicHospital
                 Console.WriteLine("5. Draw Patient Blood");
                 Console.WriteLine("6. Exit");
                 string userInput = Console.ReadLine();
-
-                //Invoke Tick Method Stretch Task
-                if(counter %5 == 0)
-                {
-                    //Do some tasks in here
-                    Console.WriteLine("Hello World From Tick Method!"); 
-                }
 
                 switch (userInput)
                 {
@@ -73,6 +66,13 @@ namespace UniversityClinicHospital
                         break;
                     default:
                         break;
+                }
+
+                //Invoke Tick Method Stretch Task
+                if (counter % 5 == 0)
+                {
+                    //Do some tasks in here
+                    Console.WriteLine("Hello World From Tick Method!");
                 }
 
             }
