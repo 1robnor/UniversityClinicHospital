@@ -48,6 +48,13 @@ namespace UniversityClinicHospital
         public override void DrawBlood(Patient myPatient)
         {
             Console.Write("Sorry you cannot draw blood for a patient, stay in your lane. \n");
+
         }
+
+        public override void PerformAdministrationTasks()
+        {
+            Console.WriteLine("Sorry you need to be part of Hospital Administration to Perform Tasks.");
+        }
+
     }
 }

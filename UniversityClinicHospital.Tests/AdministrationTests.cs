@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
 namespace UniversityClinicHospital.Tests
 {
-    class AdministrationTests
+    public class AdministrationTests
     {
+        [Fact]
+        public void Create_Administration_Class()
+        {
+            
+        }
+
+
     }
 }

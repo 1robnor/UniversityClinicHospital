@@ -54,5 +54,11 @@ namespace UniversityClinicHospital
             myPatient.BloodLevel -= 5;
             Console.Write($" After Nurse visit : {myPatient.BloodLevel} \n");
         }
+
+        public override void PerformAdministrationTasks()
+        {
+            Console.WriteLine("Sorry you need to be part of Hospital Administration to Perform Tasks.");
+        }
+
     }
 }

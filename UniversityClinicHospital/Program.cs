@@ -29,7 +29,8 @@ namespace UniversityClinicHospital
                 Console.WriteLine("3. View Patient Information");
                 Console.WriteLine("4. Care For Patient");
                 Console.WriteLine("5. Draw Patient Blood");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("6. Administration Tasks");
+                Console.WriteLine("7. Exit");
                 string userInput = Console.ReadLine();
 
                 switch (userInput)
@@ -62,6 +63,9 @@ namespace UniversityClinicHospital
                         counter++;
                         break;
                     case "6":
+                        myHospital.ExecuteHospitalNeeds();
+                        break;
+                    case "7":
                         hospitalIsRunning = false;
                         break;
                     default:

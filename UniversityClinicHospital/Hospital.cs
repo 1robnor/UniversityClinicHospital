@@ -33,6 +33,7 @@ namespace UniversityClinicHospital
             employeeList.Add(new Nurse { EmployeeId = 2, EmployeeName = "Nurse FeelGood", NumberOfPatients = 1 });
             employeeList.Add(new Receptionist { EmployeeId = 3, EmployeeName = "Rachael" });
             employeeList.Add(new Janitor { EmployeeId = 4, EmployeeName = "Steve" });
+            employeeList.Add(new Administration { EmployeeId = 5, EmployeeName = "Sam" });
         }
 
         public void ShowEmployeeList()
@@ -69,6 +70,21 @@ namespace UniversityClinicHospital
             int userChoice = Convert.ToInt32(Console.ReadLine());
             Employee chosenEmployee = employeeList[userChoice - 1];
             chosenEmployee.DrawBlood(myPatient);
+        }
+
+        public void ExecuteHospitalNeeds()
+        {
+            foreach (Employee listofEmployees in employeeList)
+            {
+                listofEmployees.ShowEmployeeList();
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Select an administrator to to take care of hospital.");
+            int userChoice = Convert.ToInt32(Console.ReadLine());
+            Employee chosenEmployee = employeeList[userChoice - 1];
+            chosenEmployee.PerformAdministrationTasks();
+
         }
         
 

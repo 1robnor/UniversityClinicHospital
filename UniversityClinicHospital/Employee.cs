@@ -34,5 +34,7 @@ namespace UniversityClinicHospital
         public abstract void CareForPatient(Patient myPatient);
 
         public abstract void DrawBlood(Patient myPatient);
+
+        public abstract void PerformAdministrationTasks();
     }
 }
