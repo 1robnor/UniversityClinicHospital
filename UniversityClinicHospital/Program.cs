@@ -15,9 +15,7 @@ namespace UniversityClinicHospital
 
             //Create Patient
             Patient myPatient = new Patient(1, "Sam");
-            //Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
-
-
+     
             bool hospitalIsRunning = true;
 
             while(hospitalIsRunning)
@@ -30,7 +28,6 @@ namespace UniversityClinicHospital
                 Console.WriteLine("5. Draw Patient Blood");
                 Console.WriteLine("6. Exit");
                 string userInput = Console.ReadLine();
-
 
                 switch (userInput)
                 {
@@ -62,7 +59,6 @@ namespace UniversityClinicHospital
                     default:
                         break;
                 }
-
 
             }
 
