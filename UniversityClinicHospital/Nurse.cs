@@ -15,6 +15,7 @@ namespace UniversityClinicHospital
         {
             HasBeenPaid = false;
             Salary = 50000;
+            IsMedicalProfessional = true;
         }
 
         public Nurse(int id, string name, int numberOfPatients)
@@ -24,6 +25,7 @@ namespace UniversityClinicHospital
             NumberOfPatients = numberOfPatients;
             HasBeenPaid = false;
             Salary = 50000;
+            IsMedicalProfessional = true;
         }
 
         //methods
@@ -34,7 +36,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($" Number of Patients: {NumberOfPatients}");
+            Console.Write($" Number of Patients: {NumberOfPatients} Medical Professional: {IsMedicalProfessional}");
 
         }
         public override void CareForPatient(Patient myPatient)

@@ -15,6 +15,7 @@ namespace UniversityClinicHospital
             IsOnThePhone = false;
             HasBeenPaid = false;
             Salary = 45000;
+            IsMedicalProfessional = false;
         }
 
         public Receptionist(int id, string name)
@@ -24,6 +25,7 @@ namespace UniversityClinicHospital
             IsOnThePhone = false;
             HasBeenPaid = false;
             Salary = 45000;
+            IsMedicalProfessional = false;
         }
 
         //Methods
@@ -34,7 +36,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($" On the Phone: {IsOnThePhone}");
+            Console.Write($" On the Phone: {IsOnThePhone} Medical Professional: {IsMedicalProfessional}");
 
         }
         public override void CareForPatient(Patient myPatient)

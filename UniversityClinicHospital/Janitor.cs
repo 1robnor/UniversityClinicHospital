@@ -14,7 +14,8 @@ namespace UniversityClinicHospital
         {
             IsSweeping = false;
             Salary = 40000;
-            HasBeenPaid = false; 
+            HasBeenPaid = false;
+            IsMedicalProfessional = false;
         }
 
         public Janitor(int id, string name)
@@ -24,6 +25,7 @@ namespace UniversityClinicHospital
             IsSweeping = false;
             Salary = 40000;
             HasBeenPaid = false;
+            IsMedicalProfessional = false;
         }
         //methods
         public override void PaySalary()
@@ -34,7 +36,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($" Is Sweeping: {IsSweeping}");
+            Console.Write($" Is Sweeping: {IsSweeping} Medical Professional: {IsMedicalProfessional}");
 
         }
 

@@ -12,6 +12,7 @@ namespace UniversityClinicHospital
         public string EmployeeName { get; set; }
         public bool HasBeenPaid { get; set; }
         public int Salary { get; set; }
+        public bool IsMedicalProfessional { get; set; }
 
         //Methods
         public virtual void PaySalary()

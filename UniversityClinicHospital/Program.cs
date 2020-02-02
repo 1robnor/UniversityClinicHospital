@@ -17,7 +17,7 @@ namespace UniversityClinicHospital
             Patient myPatient = new Patient(1, "Sam");
 
             //Create counter for tick method
-            int counter = 1;
+            int counter = 0;
 
             bool hospitalIsRunning = true;
 
@@ -71,8 +71,19 @@ namespace UniversityClinicHospital
                 //Invoke Tick Method Stretch Task
                 if (counter % 5 == 0)
                 {
+                    Console.Clear();
                     //Do some tasks in here
-                    Console.WriteLine("Hello World From Tick Method!");
+                    Console.WriteLine("5 Hospital Interactions occurred!");
+
+                    //Change HealthLevel
+                    Console.WriteLine($"Your patient's health status has changed to {myPatient.HealthStatus = 60}");
+
+                    //Add Patient to Nurse
+                    
+
+                    //Toggle Receptionist on the phone
+
+                    //Toggle Janitor is sweeping
                 }
 
             }
