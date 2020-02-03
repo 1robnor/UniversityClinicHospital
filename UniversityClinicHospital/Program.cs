@@ -83,11 +83,11 @@ namespace UniversityClinicHospital
                     Console.WriteLine($"Your patient's health status has changed to {myPatient.HealthStatus = 60}");
 
                     //Add Patient to Nurse
-                    
-
                     //Toggle Receptionist on the phone
-
                     //Toggle Janitor is sweeping
+                    myHospital.TickMethod();
+
+
                 }
 
             }

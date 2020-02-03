@@ -39,7 +39,7 @@ namespace UniversityClinicHospital
         public void ShowEmployeeList()
         {
             foreach (Employee listofEmployees in employeeList)
-            {         
+            {
                 listofEmployees.ShowEmployeeList();
                 Console.WriteLine();
             }
@@ -86,7 +86,45 @@ namespace UniversityClinicHospital
             chosenEmployee.PerformAdministrationTasks();
 
         }
-        
+
+        public void TickMethod()
+        {
+            Nurse selNurse = new Nurse();
+            selNurse = (Nurse)employeeList.Find(x => x.EmployeeId == 2);
+            selNurse.NumberOfPatients++;
+            Console.WriteLine($"Nurse now has { selNurse.NumberOfPatients} Patients");
+
+            //Toggle Receptionist on the phone
+            Receptionist selRecpt = new Receptionist();
+            selRecpt = (Receptionist)employeeList.Find(x => x.EmployeeId == 3);
+            if (selRecpt.IsOnThePhone)
+            {
+                Console.WriteLine($"Receptionist is on the phone {selRecpt.IsOnThePhone}");
+                selRecpt.IsOnThePhone = false;
+            }
+            else
+            {
+                Console.WriteLine($"Receptionist is on the phone {selRecpt.IsOnThePhone}");
+                selRecpt.IsOnThePhone = true;
+            }
+
+            //Toggle Janitor is sweeping
+            Janitor selJanitor = new Janitor();
+            selJanitor = (Janitor)employeeList.Find(x => x.EmployeeId == 4);
+            if (selJanitor.IsSweeping)
+            {
+                Console.WriteLine($"Janitor is sweeping {selJanitor.IsSweeping}");
+                selJanitor.IsSweeping = false;
+            }
+            else
+            {
+                Console.WriteLine($"Janitor is on the phone {selJanitor.IsSweeping}");
+                selJanitor.IsSweeping = true;
+            }
+
+
+        }
+
 
     }
 }
