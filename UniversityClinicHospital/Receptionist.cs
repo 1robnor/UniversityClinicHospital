@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    public class Receptionist : Doctor
+    public class Receptionist : Employee
     {
         //Properties
         public bool IsOnThePhone { get; set; }
@@ -15,6 +15,7 @@ namespace UniversityClinicHospital
             IsOnThePhone = false;
             HasBeenPaid = false;
             Salary = 45000;
+            IsMedicalProfessional = false;
         }
 
         public Receptionist(int id, string name)
@@ -24,6 +25,7 @@ namespace UniversityClinicHospital
             IsOnThePhone = false;
             HasBeenPaid = false;
             Salary = 45000;
+            IsMedicalProfessional = false;
         }
 
         //Methods
@@ -34,7 +36,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($" On the Phone: {IsOnThePhone}");
+            Console.Write($" On the Phone: {IsOnThePhone} Medical Professional: {IsMedicalProfessional}");
 
         }
         public override void CareForPatient(Patient myPatient)
@@ -46,6 +48,13 @@ namespace UniversityClinicHospital
         public override void DrawBlood(Patient myPatient)
         {
             Console.Write("Sorry you cannot draw blood for a patient, stay in your lane. \n");
+
         }
+
+        public override void PerformAdministrationTasks()
+        {
+            Console.WriteLine("Sorry you need to be part of Hospital Administration to Perform Tasks.");
+        }
+
     }
 }

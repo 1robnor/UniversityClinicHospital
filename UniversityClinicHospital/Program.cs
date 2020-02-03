@@ -7,91 +7,114 @@ namespace UniversityClinicHospital
     {
         static void Main(string[] args)
         {
+            //Create a New Hospital
+            Hospital myHospital = new Hospital(1, "UHC");
 
-            //Create List
-            List<Employee> employeeList = new List<Employee>();
+            //  Seed The list
+            myHospital.SeedEmployeeList();
 
-            // Add parts to the list.
-            employeeList.Add(new Doctor {EmployeeId = 1, EmployeeName = "Dr. Feel Good", SpecialtyArea = "Heart Surgeon" });
-            employeeList.Add(new Nurse { EmployeeId = 2, EmployeeName = "Nurse FeelGood", NumberOfPatients = 1 });
-            employeeList.Add(new Receptionist { EmployeeId = 3, EmployeeName = "Rachael"});
-            employeeList.Add(new Janitor { EmployeeId = 4, EmployeeName = "Steve"});
-
-            
             //Create Patient
             Patient myPatient = new Patient(1, "Sam");
-            //Console.WriteLine($"{myPatient.PatientId} {myPatient.PatientName}");
 
+            //Create counter for tick method
+            int counter = 0;
 
             bool hospitalIsRunning = true;
 
-            while(hospitalIsRunning)
+            PrintLogo();
+            while (hospitalIsRunning)
             {
                 Console.WriteLine("Welcome To University Clinic Hospital!");
                 Console.WriteLine("1. List all Employees");
                 Console.WriteLine("2. Pay All Employees");
-                Console.WriteLine("3. Care For Patient");
-                Console.WriteLine("4. Draw Patient Blood");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("3. View Patient Information");
+                Console.WriteLine("4. Care For Patient");
+                Console.WriteLine("5. Draw Patient Blood");
+                Console.WriteLine("6. Administration Tasks");
+                Console.WriteLine("7. Exit");
                 string userInput = Console.ReadLine();
-
 
                 switch (userInput)
                 {
                     case "1":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.ShowEmployeeList();
-                            Console.WriteLine();
-                        }
+                        PrintLogo();
+                        myHospital.ShowEmployeeList();
+                        counter++;
                         break;
                     case "2":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.PaySalary();
-                        }
+                        PrintLogo();
+                        myHospital.PayAllEmployees();
+                        counter++;
                         break;
                     case "3":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.ShowEmployeeList();
-                            Console.WriteLine();
-                        }
-
-                        Console.WriteLine("Select a medical professional to care for patient by ID.");
-                        int userSelection = Convert.ToInt32(Console.ReadLine());
-                        Employee selectedEmployee = employeeList[userSelection - 1];
-                        selectedEmployee.CareForPatient(myPatient);
-
+                        PrintLogo();
+                        myPatient.ViewPatientInfo();
+                        counter++;
                         break;
                     case "4":
                         Console.Clear();
-                        foreach (Employee employee in employeeList)
-                        {
-                            employee.ShowEmployeeList();
-                            Console.WriteLine();
-                        }
-
-                        Console.WriteLine("Select a medical professional to care for patient by ID.");
-                        int userChoice = Convert.ToInt32(Console.ReadLine());
-                        Employee chosenEmployee = employeeList[userChoice - 1];
-                        chosenEmployee.DrawBlood(myPatient);
+                        PrintLogo();
+                        myHospital.ShowEmployeeList();
+                        myHospital.HealthStatusForPatient(myPatient);
+                        counter++;
                         break;
                     case "5":
+                        Console.Clear();
+                        PrintLogo();
+                        myHospital.ShowEmployeeList();
+                        myHospital.DrawBloodFromPatient(myPatient);
+                        counter++;
+                        break;
+                    case "6":
+                        Console.Clear();
+                        PrintLogo();
+                        myHospital.ExecuteHospitalNeeds();
+                        break;
+                    case "7":
                         hospitalIsRunning = false;
-
                         break;
                     default:
                         break;
                 }
 
+                //Invoke Tick Method Stretch Task
+                if (counter % 5 == 0)
+                {
+                    Console.Clear();
+                    //Do some tasks in here
+                    Console.WriteLine("5 Hospital Interactions occurred!");
+
+                    //Change HealthLevel
+                    Console.WriteLine($"Your patient's health status has changed to {myPatient.HealthStatus = 60}");
+
+                    //Add Patient to Nurse
+                    //Toggle Receptionist on the phone
+                    //Toggle Janitor is sweeping
+                    myHospital.TickMethod();
+
+
+                }
 
             }
 
             Console.ReadKey();
+        }
+
+        static void PrintLogo()
+        {
+            Console.WriteLine("UUU  UUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("UUU  UUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("UUU  UUU   HHHHHHHH   CCC");
+            Console.WriteLine("UUU  UUU   HHHHHHHH   CCC");
+            Console.WriteLine("UUUUUUUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("UUUUUUUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("         PATIENT FIRST         ");
+            Console.WriteLine();
+            Console.WriteLine();
+
         }
 
     }

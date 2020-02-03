@@ -14,6 +14,7 @@ namespace UniversityClinicHospital
         {
             HasBeenPaid = false;
             Salary = 90000;
+            IsMedicalProfessional = true;
         }
 
         public Doctor(int id, string name)
@@ -23,6 +24,7 @@ namespace UniversityClinicHospital
             SpecialtyArea = "Assign Me a Specialty";
             HasBeenPaid = false;
             Salary = 90000;
+            IsMedicalProfessional = true;
         }
 
         public Doctor(int id, string name, string specialtyArea)
@@ -32,6 +34,7 @@ namespace UniversityClinicHospital
             SpecialtyArea = specialtyArea;
             HasBeenPaid = false;
             Salary = 90000;
+            IsMedicalProfessional = true;
         }
 
 
@@ -45,7 +48,7 @@ namespace UniversityClinicHospital
         public override void ShowEmployeeList()
         {
             base.ShowEmployeeList();
-            Console.Write($" Specialty Area: {SpecialtyArea}");
+            Console.Write($" Specialty Area: {SpecialtyArea} Medical Professional: {IsMedicalProfessional}");
 
         }
 
@@ -63,6 +66,11 @@ namespace UniversityClinicHospital
             Console.Write($"Current Blood Level is : {myPatient.BloodLevel}");
             myPatient.BloodLevel -= 10;
             Console.Write($" After Doctor visit : {myPatient.BloodLevel} \n");
+        }
+
+        public override void PerformAdministrationTasks()
+        {
+            Console.WriteLine("Sorry you need to be part of Hospital Administration to Perform Tasks.");
         }
 
     }
