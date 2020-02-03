@@ -21,7 +21,8 @@ namespace UniversityClinicHospital
 
             bool hospitalIsRunning = true;
 
-            while(hospitalIsRunning)
+            PrintLogo();
+            while (hospitalIsRunning)
             {
                 Console.WriteLine("Welcome To University Clinic Hospital!");
                 Console.WriteLine("1. List all Employees");
@@ -37,32 +38,39 @@ namespace UniversityClinicHospital
                 {
                     case "1":
                         Console.Clear();
+                        PrintLogo();
                         myHospital.ShowEmployeeList();
                         counter++;
                         break;
                     case "2":
                         Console.Clear();
+                        PrintLogo();
                         myHospital.PayAllEmployees();
                         counter++;
                         break;
                     case "3":
                         Console.Clear();
+                        PrintLogo();
                         myPatient.ViewPatientInfo();
                         counter++;
                         break;
                     case "4":
                         Console.Clear();
+                        PrintLogo();
                         myHospital.ShowEmployeeList();
                         myHospital.HealthStatusForPatient(myPatient);
                         counter++;
                         break;
                     case "5":
                         Console.Clear();
+                        PrintLogo();
                         myHospital.ShowEmployeeList();
                         myHospital.DrawBloodFromPatient(myPatient);
                         counter++;
                         break;
                     case "6":
+                        Console.Clear();
+                        PrintLogo();
                         myHospital.ExecuteHospitalNeeds();
                         break;
                     case "7":
@@ -93,6 +101,20 @@ namespace UniversityClinicHospital
             }
 
             Console.ReadKey();
+        }
+
+        static void PrintLogo()
+        {
+            Console.WriteLine("UUU  UUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("UUU  UUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("UUU  UUU   HHHHHHHH   CCC");
+            Console.WriteLine("UUU  UUU   HHHHHHHH   CCC");
+            Console.WriteLine("UUUUUUUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("UUUUUUUU   HHH  HHH   CCCCCCCC");
+            Console.WriteLine("         PATIENT FIRST         ");
+            Console.WriteLine();
+            Console.WriteLine();
+
         }
 
     }

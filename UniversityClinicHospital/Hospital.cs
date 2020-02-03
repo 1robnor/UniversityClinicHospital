@@ -34,8 +34,9 @@ namespace UniversityClinicHospital
             employeeList.Add(new Receptionist { EmployeeId = 3, EmployeeName = "Rachael" });
             employeeList.Add(new Janitor { EmployeeId = 4, EmployeeName = "Steve" });
             employeeList.Add(new Administration { EmployeeId = 5, EmployeeName = "Sam" });
-        }
+            employeeList.Add(new EmergencyDispatcher { EmployeeId = 6, EmployeeName = "Fajita", Ambulance = 2 });
 
+        }
         public void ShowEmployeeList()
         {
             foreach (Employee listofEmployees in employeeList)
@@ -58,8 +59,9 @@ namespace UniversityClinicHospital
         public void HealthStatusForPatient(Patient myPatient)
         {
             Console.WriteLine("Select a medical professional to care for patient by ID.");
-            int userSelection = Convert.ToInt32(Console.ReadLine());
-            Employee selectedEmployee = employeeList[userSelection - 1];
+            string selChoice2 = Console.ReadLine();
+            int userChoice2 = Convert.ToInt32(selChoice2);
+            Employee selectedEmployee = employeeList[userChoice2 - 1];
             selectedEmployee.CareForPatient(myPatient);
         }
 
@@ -81,7 +83,8 @@ namespace UniversityClinicHospital
             }
 
             Console.WriteLine("Select an administrator to to take care of hospital.");
-            int userChoice = Convert.ToInt32(Console.ReadLine());
+            string selChoice = Console.ReadLine();
+            int userChoice = Convert.ToInt32(selChoice);
             Employee chosenEmployee = employeeList[userChoice - 1];
             chosenEmployee.PerformAdministrationTasks();
 
